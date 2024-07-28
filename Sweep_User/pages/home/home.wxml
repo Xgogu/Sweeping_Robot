@@ -1,0 +1,10 @@
+<block>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" style="position: relative; left: 292rpx; top: 137rpx"></image>
+    <text class="userinfo-nickname" style="left: 162rpx; top: 180rpx; position: relative">{{userInfo.nickName}}</text>
+</block> 
+<view class="container">
+  <button bindtap="logout" class="logout_btn" type="primary">退出登录</button>
+  <mp-dialog title="退出登录" show="{{isShow}}" bindbuttontap="confirmLogout" buttons="{{buttons}}">
+    <view>确认退出吗？</view>
+  </mp-dialog>
+</view>

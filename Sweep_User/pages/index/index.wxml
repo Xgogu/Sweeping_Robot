@@ -1,0 +1,78 @@
+<view>
+
+  <!-- <van-button wx:if="{{showButton}}" bind:tap="connectDevice" style="position: relative; left: 192rpx; top: 560rpx">连接设备</van-button>
+
+  <van-cell-group wx:if="{{!showButton}}">-->
+    <view > 
+<van-cell-group>
+  <van-cell title="设备名称" value="{{device_name}}"  />
+  <van-cell title="设备状态" value="{{device_status}}" bindtap="redirectToStatusPage" />
+</van-cell-group>
+<!--设备状态-->
+<view></view>
+<!--温湿度图片显示-->
+<view  class="light">
+  <van-cell-group>
+<van-cell  title="温湿度检测" icon="{{fanicon}}" >
+  <van-switch checked="{{ checked1 }}" size="24px" bind:change="open" />
+</van-cell>
+  </van-cell-group> 
+</view>
+<view  class="pic">
+  
+<van-row>
+  <van-col span="12" ><van-icon  size="60px" name="/images/湿度.png" /></van-col>
+  <van-col span="12"><van-icon  size="60px" name="/images/温度.png" /></van-col>
+  <!-- <van-col span="8"><van-icon  size="60px" name="/utils/img/yangan.png" /></van-col> -->
+</van-row>
+</view>
+<!--温湿度数值-->
+<view  class="wendu">
+  <van-row style="text-align:center;" >
+    <van-col span="12">湿度：{{shidu}} %</van-col>
+    <van-col span="12">温度：{{wendu}} ℃</van-col>
+    <!-- <van-col span="8">烟感：{{mq}} </van-col> -->
+  </van-row>
+</view>
+<!--控制灯1-->
+<view  class="light">
+  <van-cell-group>
+<van-cell  title="灯" icon="{{ledicon}}" >
+  <van-switch checked="{{ checked }}" size="24px" bind:change="onChange" />
+</van-cell>
+  </van-cell-group>
+</view>
+<!--控制灯2-->
+<view  class="light2">
+  <van-icon  size="120px" name="{{ledicon}}" bind:click="onChange2"/>
+</view>
+</view>
+<progress id= 'progress1' class='progress-1'  currentProgress=" 0" maxProgress="10" canSlide=" {{true}}" slideImg="/utils/img/lighton.png" progressName="亮度调节" bindmyevent="handleMyEvent"/>
+<!-- <view> -->
+<!-- 控制风扇1-->
+<!-- <view  class="light">
+  <van-cell-group>
+<van-cell  title="风扇" icon="{{fanicon}}" >
+  <van-switch checked="{{ checked1 }}" size="24px" bind:change="open" />
+</van-cell>
+  </van-cell-group> 
+</view> -->
+<!--控制风扇2-->
+<!-- <view  class="light2">
+  <van-icon  size="120px" name="{{fanicon}}" bind:click="log"/>
+</view> -->
+<!-- </view> -->
+  <!-- </van-cell-group> -->
+</view>
+
+
+
+<view class="modal" wx:if="{{showModal}}">
+  <view class="modal-content" style="width: 484rpx; height: 260rpx; display: block; box-sizing: border-box">
+    <text class="modal-text">确定要断开连接吗？</text>
+    <view class="modal-button">
+      <button class="confirm-button" bindtap="confirmDisconnect" style="width: 168rpx; height: 92rpx; display: block; box-sizing: border-box; left: -128rpx; top: 46rpx; position: relative">确认</button>
+      <button class="cancel-button" bindtap="cancelDisconnect" style="position: relative; left: 128rpx; top: -46rpx; width: 168rpx; height: 92rpx; display: block; box-sizing: border-box">取消</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,87 @@
+<van-cell-group style="width: 191rpx; height: 182rpx; display: inline; box-sizing: content-box">
+  
+
+<view class="custom-view" style="position: relative; left: 15rpx; top: 542rpx; width: 722rpx; height: 298rpx; display: block; box-sizing: border-box">
+    <view class="xili">
+      <van-row style="text-align:center;" >
+        <van-col span="8"style="position: relative; left: -48rpx; top: -34rpx" style="position: relative; left: -38rpx; top: -22rpx">水箱</van-col>
+      </van-row>
+    </view>
+    <progress style="width: 730rpx; height: 74rpx; display: flex; box-sizing: border-box; position: relative; left: -122rpx; top: 0rpx" id= 'progress1' class='progress-1'  currentProgress=" 0" maxProgress="10" canSlide=" {{true}}" slideImg="/utils/img/lighton.png"bindmyevent="handleMyEvent2"/>
+
+    <view class="wendu" style="width: 732rpx; height: 74rpx; display: block; box-sizing: border-box">
+      <van-row style="text-align:center;" >
+        <van-col span="6" style="position: relative; ">低档</van-col>
+        <van-col span="12" style="position: relative; ">中档</van-col>
+        <van-col span="6" style="position: relative; ">高档</van-col>
+      </van-row>
+    </view>
+  </view>
+<view class="custom-view" style="position: relative; left: 15rpx; top: 578rpx; width: 722rpx; height: 266rpx; display: block; box-sizing: border-box">
+
+    <view class="wendu" style="width: 732rpx; height: 74rpx; display: block; box-sizing: border-box">
+      <image src='/images/yanbianqingsao.png'  bindtap="yanbian" style="width: 106rpx; height: 106rpx; display: inline-block; box-sizing: border-box; position: relative; left: 128rpx; top: 0rpx"></image>
+      <image src='/images/dingdianqingsao.png'  bindtap="dingdian" style="width: 106rpx; height: 106rpx; display: inline-block; box-sizing: border-box; position: relative; left: 374rpx; top: 0rpx"></image>
+      <van-row style="text-align:center;" >
+        
+        <van-col span="12" style="position: relative; ">沿边清扫</van-col>
+        <van-col span="12" bindtap="gotocanvespage"
+         style="position: relative; left: -12rpx; top: 0rpx">定点清扫</van-col>
+      </van-row>
+    </view>
+</view>
+
+
+<view class="custom-view" style="position: relative; left: 15rpx; top: 606rpx; width: 722rpx; height: 298rpx; display: block; box-sizing: border-box">
+    <view class="xili">
+      <van-row style="text-align:center;" >
+        <van-col span="8"style="position: relative; left: -48rpx; top: -34rpx" style="position: relative; left: -38rpx; top: -22rpx">高级功能</van-col>
+      </van-row>
+    </view>
+
+    <view class="wendu" style="width: 732rpx; height: 74rpx; display: block; box-sizing: border-box">
+      <image src='/images/shoudong.png'  bindtap="gotocontrol" style="width: 106rpx; height: 106rpx; display: inline-block; box-sizing: border-box; position: relative; left: 136rpx; top: -16rpx"></image>
+      <image src='/images/yuyue.png'  bindtap="viewLog" style="width: 106rpx; height: 106rpx; display: inline-block; box-sizing: border-box; position: relative; left: 370rpx; top: -16rpx"></image>
+      <van-row style="text-align:center;" >
+        <van-col span="12"  bindtap="gotocontrol" style="position: relative; ">手动控制  </van-col> 
+        <van-col span="12" bindtap="viewLog" style="position: relative; left: -16rpx; top: 0rpx">查看日志</van-col>
+      </van-row>
+    </view>
+  </view>
+
+<view class="custom-view" style="position: relative; left: 15rpx; top: -650rpx; width: 722rpx; height: 298rpx; display: block; box-sizing: border-box">
+    <view class="xili">
+      <van-row style="text-align:center;" >
+        <van-col span="8"style="position: relative; left: -48rpx; top: -34rpx" style="position: relative; left: -38rpx; top: -22rpx">吸力</van-col>
+      </van-row>
+    </view>
+    <progress style="width: 730rpx; height: 74rpx; display: flex; box-sizing: border-box; position: relative; left: -122rpx; top: 0rpx" id= 'progress2' class='progress-1'  currentProgress=" 0" maxProgress="10" canSlide=" {{true}}" slideImg="/utils/img/lighton.png"bindmyevent="handleMyEvent1"/>
+
+    <view class="wendu" style="width: 732rpx; height: 74rpx; display: block; box-sizing: border-box">
+      <van-row style="text-align:center;" >
+        <van-col span="6" style="position: relative; ">关闭</van-col>
+        <van-col span="3" style="position: relative; ">安静</van-col>
+        <van-col span="6" style="position: relative; ">标准</van-col>
+        <van-col span="3" style="position: relative; ">强力</van-col>
+        <van-col span="6" style="position: relative; ">MAX</van-col>
+      </van-row>
+    </view>
+  </view>
+
+</van-cell-group>
+
+<view class="custom-view1" style="position: relative; left: 35rpx; top: -1106rpx; width: 341rpx; height: 120rpx; display: flex; align-items: center; justify-content: center; box-sizing: border-box" bind:tap="charge">
+  <view class="wendu" style="width: 322rpx; height: 84rpx; display: flex; align-items: center; justify-content: center; box-sizing: border-box">
+    <image src='/images/huichong.png' style="width: 106rpx; height: 84rpx; display: inline-block; box-sizing: border-box; margin-right: 10rpx; position: relative; left: 19rpx; top: -20rpx"></image>
+    <van-col span="8" style="display: flex; align-items: center; justify-content: center; width: 203rpx; height: 84rpx; box-sizing: border-box; position: relative; left: 2rpx; top: -20rpx">回充</van-col>
+  </view>
+</view>
+
+<view class="custom-view1" style="position: relative; left: 392rpx; top: -1226rpx; width: 342rpx; height: 120rpx; display: flex; align-items: center; justify-content: center; box-sizing: border-box" bind:tap="auto">
+  <view class="wendu" style="width: 322rpx; height: 84rpx; display: flex; align-items: center; justify-content: center; box-sizing: border-box">
+    <image src='/images/qingsao.png' style="width: 106rpx; height: 84rpx; display: inline-block; box-sizing: border-box; margin-right: 10rpx; position: relative; left: 10rpx; top: -20rpx"></image>
+    <van-col span="10" style="display: flex; align-items: center; justify-content: center; width: 203rpx; height: 84rpx; box-sizing: border-box; position: relative; left: -15rpx; top: -20rpx">清扫</van-col>
+  </view>
+
+  <!-- <button bindtap="viewLog">日志</button> -->
+</view>

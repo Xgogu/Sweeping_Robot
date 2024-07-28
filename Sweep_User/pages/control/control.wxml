@@ -1,0 +1,62 @@
+<view class="canvas-container {{ showCanvas ? 'show' : '' }}" bindtap="closeCanvas">
+  <canvas canvas-id="myCanvas" style="width: 100%; height: 100%;"></canvas>
+</view>
+
+<view catchtouchmove="preventTouchMove">
+  <view class="container">
+    <text class="device-name">设备名称：{{name}}</text>
+    <text class="runtime">当前时间：{{time1}}</text>
+    <text class="status" bindtap="showDisconnectModal">状态：{{connected ? "已连接" : "已断开"}}</text>
+  </view>
+</view>
+    <!-- 弹窗 -->
+  <view class="modal" wx:if="{{showModal}}">
+    <view class="modal-content" style="width: 484rpx; height: 260rpx; display: block; box-sizing: border-box">
+      <text class="modal-text">确定要断开连接吗？</text>
+      <view class="modal-button">
+        <button class="confirm-button" bindtap="confirmDisconnect" style="width: 168rpx; height: 92rpx; display: block; box-sizing: border-box; left: -128rpx; top: 46rpx; position: relative">确认</button>
+        <button class="cancel-button" bindtap="cancelDisconnect" style="position: relative; left: 128rpx; top: -46rpx; width: 168rpx; height: 92rpx; display: block; box-sizing: border-box">取消</button>
+      </view>
+    </view>
+  </view>
+  <image src='/icon/箭头上.png' style="position: relative; left: 290rpx; top: 84rpx; width: 168rpx; height: 184rpx; display: block; box-sizing: border-box" bindtap="Sendforward"></image>
+  <image src='/icon/箭头下.png' style="position: relative; left: 290rpx; top: 323rpx; width: 168rpx; height: 184rpx; display: block; box-sizing: border-box" bindtap="Sendback"></image>
+  <image src='/icon/重置.png' style="position: relative; left: 310rpx; top: -44rpx; width: 127rpx; height: 127rpx; display: block; box-sizing: border-box" bindtap="Sendset"></image>
+  <image src='/icon/箭头左.png' style="position: relative; left: 48rpx; top: -191rpx; width: 184rpx; height: 168rpx; display: block; box-sizing: border-box" bindtap="Sendleft"></image>
+  <image src='/icon/箭头右.png' style="position: relative; left: 519rpx; top: -357rpx; width: 184rpx; height: 168rpx; display: block; box-sizing: border-box" bindtap="Sendright"></image>
+  <!-- <button style="position: relative; left: 0rpx; top: 444rpx; width: 168rpx; height: 127rpx; display: block; box-sizing: border-box" bindtap="Sendforward">前进</button> -->
+  <!-- <button style="position: relative; left: 2rpx; top: 690rpx; width: 168rpx; height: 127rpx; display: block; box-sizing: border-box" bindtap="Sendback">后退</button> -->
+  <!-- <button style="position: relative; left: -226rpx; top: 369rpx; width: 168rpx; height: 127rpx; display: block; box-sizing: border-box" bindtap="Sendleft">左转</button>
+  <button style="position: relative; left: 232rpx; top: 241rpx; width: 168rpx; height: 127rpx; display: block; box-sizing: border-box" bindtap="Sendright">右转</button>
+  <button style="position: relative; left: 0rpx; top: 114rpx; width: 168rpx; height: 127rpx; display: block; box-sizing: border-box" bindtap="Sendset">立正</button> -->
+  <!-- <image src='/gesture/up.jpg' style="position: relative; left: 48rpx; top: 0rpx; width: 168rpx; height: 200rpx; display: block; box-sizing: border-box" bindtap="Sendju"></image>
+  <image src='/gesture/wave.jpg' style="position: relative; left: 265rpx; top: -211rpx; width: 226rpx; height: 220rpx; display: block; box-sizing: border-box" bindtap="Sendwave"></image>
+  <image src='/gesture/swing.jpg' style="position: relative; left: 516rpx; top: -440rpx; width: 200rpx; height: 220rpx; display: block; box-sizing: border-box" bindtap="Sendflap"></image>
+  <image src='/gesture/jump.jpg' style="position: relative; left: 34rpx; top: -388rpx; width: 200rpx; height: 210rpx; display: block; box-sizing: border-box" bindtap="Sendjump"></image>
+  <image src='/gesture/tiptoe.jpg' style="position: relative; left: 286rpx; top: -608rpx; width: 180rpx; height: 210rpx; display: block; box-sizing: border-box" bindtap="Sendtiptoe"></image>
+  <image src='/gesture/dance.jpg' style="position: relative; left: 527rpx; top: -829rpx; width: 190rpx; height: 220rpx; display: block; box-sizing: border-box" bindtap="Sendmoon"></image> -->
+  <!-- <button style="position: relative; left: -162rpx; top: -113rpx; width: 324rpx; height: 78rpx; display: block; box-sizing: border-box" bindtap="Sendju">回充</button> -->
+  <!-- <button style="position: relative; left: 165rpx; top: -114rpx; width: 324rpx; height: 78rpx; display: block; box-sizing: border-box" bindtap="Sendmoon">开始清扫</button> -->
+  <!-- <image src='/images/chongdianqi.png' style="position: relative; left: 68rpx; top: -260rpx; width: 245rpx; height: 229rpx; display: block; box-sizing: border-box" bindtap="sendju"></image>  -->
+  <image src='/images/ditu.png' style="position: relative; left: 271rpx; top: -2rpx; width: 209rpx; height: 203rpx; display: block; box-sizing: border-box" bindtap="gotocanvespage"></image> 
+  
+  <!-- <button style="position: relative; left: 165rpx; top: -191rpx; width: 324rpx; height: 78rpx; display: block; box-sizing: border-box" bindtap="gotocanvespage">开始建图</button> -->
+<!-- </view> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,111 @@
+page{
+  background-color: #f5efef
+}
+
+.container {
+  position: relative;
+  padding: 20rpx;
+  background-color: #fcfcfc;
+  border-radius: 40rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  margin: 20rpx;
+}
+
+.device-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  word-break: break-all;
+  margin-bottom: 10rpx;
+}
+
+.runtime {
+  font-size: 24rpx;
+  color: gray;
+  word-break: break-all;
+  margin-bottom: 10rpx;
+}
+
+.status {
+  font-size: 24rpx;
+  color: gray;
+  word-break: break-all;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5rpx 10rpx;
+  background-color: #e0e0e0;
+  border-radius: 5rpx;
+  transition: background-color 0.3s;
+}
+
+.status:active {
+  background-color: #ccc;
+}
+/* 在对应的wxss样式文件中 */
+/* 背景遮罩 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* 在对应的wxss样式文件中 */
+/* 弹窗内容区域 */
+.modal-content {
+  background-color: white;
+  padding: 30rpx; /* 增大文字调整内边距 */
+  border-radius: 10rpx;
+  text-align: center;
+  z-index: 10000;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 弹窗文本 */
+.modal-text {
+  font-size: 35rpx; /* 调大文本字号 */
+  margin-bottom: 20rpx;
+}
+
+/* 弹窗按钮样式 */
+.modal-button {
+  padding: 2rpx 6rpx; /* 减小按钮尺寸 */
+  border: none;
+  border-radius: 4rpx;
+  color: rgb(185, 178, 178);
+  font-size: 6rpx; /* 调小按钮字号 */
+  cursor: pointer;
+  outline: none;
+}
+
+/* 在 wxss 文件中 */
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* 半透明白色 */
+  z-index: 9999; /* 确保在页面上方 */
+  display: none; /* 默认隐藏 */
+}
+
+.canvas-container.show {
+  display: flex; /* 显示白布 */
+  align-items: center; /* 居中内容 */
+  justify-content: center; /* 居中内容 */
+}
+
+
+
+/* 设置其他样式，如宽度、高度、边框等 */
+
+
+
+

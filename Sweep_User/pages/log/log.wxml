@@ -1,0 +1,16 @@
+<view class="container">
+  <block wx:for="{{ cycles }}" wx:key="index">
+    <view class="log-item">
+      <text>周期开始时间：</text>
+      <text>{{ item.startTime }}</text>
+    </view>
+    <view class="log-item">
+      <text>周期结束时间：</text>
+      <text>{{ item.endTime }}</text>
+    </view>
+    <view class="divider"></view>
+  </block>
+
+  <!-- 添加清除按钮 -->
+  <button class="clear-button" bindtap="clearLogs">清除所有日志</button>
+</view>

@@ -1,0 +1,47 @@
+/* pages/shebei/shebei.wxss */
+page{
+  background-color: #f5efef
+}
+
+
+.wendu{
+  margin-top:20px;
+}
+.custom-view {
+  background-color: white;
+  border-radius: 25px;
+  padding: 5px;
+  /* 可以添加其他样式属性 */
+}
+/* 商品列表样式 */
+.way_list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding: rpx;
+  background-color: #fff;
+  border-radius: 35rpx;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 商品图片样式 */
+.good_image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  border-radius: 5rpx;
+}
+
+/* 商品名字样式 */
+.good_name {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+/* 商品状态样式 */
+.good_status {
+  font-size: 24rpx;
+  color: #666;
+}
+

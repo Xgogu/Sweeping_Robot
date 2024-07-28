@@ -1,0 +1,52 @@
+/* pages/sweep/sweep.wxss */
+page{
+  background-color: #f5efef
+}
+
+.wendu{
+  margin-top:20px;
+}
+
+.xili{
+  margin-top:20px;
+}
+.custom-view {
+  background-color: white;
+  border-radius: 25px;
+  padding: 5px;
+  /* 可以添加其他样式属性 */
+}
+
+.custom-view1 {
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px;
+  /* 可以添加其他样式属性 */
+}
+
+.custom-view2 {
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px;
+  /* 可以添加其他样式属性 */
+}
+
+.progress-max {
+  position: absolute;
+  left: 192rpx;
+  height: 24rpx;
+  width: 428rpx;
+  background: #d8d8d8;
+  border-radius: 30rpx;
+  z-index: 10;
+}
+
+.progress-current {
+  position: absolute;
+  left: 192rpx;
+  height: 24rpx;
+  width: 428rpx;
+  background: #59B0FF;
+  border-radius: 30rpx;
+  z-index: 20;
+}
